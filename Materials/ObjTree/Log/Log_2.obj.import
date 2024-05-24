@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bilik6ydlcadn"
+path="res://.godot/imported/Log_2.obj-94dc383c4152f557ae683bcf84f3952b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Log_2.obj-94dc383c4152f557ae683bcf84f3952b.mesh"]
+
+source_file="res://Materials/ObjTree/Log/Log_2.obj"
+dest_files=["res://.godot/imported/Log_2.obj-94dc383c4152f557ae683bcf84f3952b.mesh", "res://.godot/imported/Log_2.obj-94dc383c4152f557ae683bcf84f3952b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

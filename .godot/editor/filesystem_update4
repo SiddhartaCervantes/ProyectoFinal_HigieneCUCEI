@@ -1,0 +1,9 @@
+res://Scenes/World.tscn
+res://Scenes/repetition.tres
+res://Materials/Pink.tres
+res://Scripts/title_screen.tscn
+res://Scenes/coin.tscn
+res://Scenes/Score.tscn
+res://Scripts/Player.gd
+res://Scenes/character.tscn
+res://Scenes/Gato.tscn

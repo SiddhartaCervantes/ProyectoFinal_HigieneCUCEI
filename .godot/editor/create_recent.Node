@@ -1,0 +1,14 @@
+CharacterBody3D
+MeshInstance3D
+TouchScreenButton
+Control
+CanvasLayer
+Node2D
+Label
+Sprite3D
+RichTextLabel
+TextEdit
+RigidBody3D
+Node3D
+StaticBody3D
+AnimatedSprite2D

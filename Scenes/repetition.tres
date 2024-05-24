@@ -1,0 +1,61 @@
+[gd_resource type="VisualShader" load_steps=6 format=3 uid="uid://bu8wkc8ssvoav"]
+
+[ext_resource type="Texture2D" uid="uid://cnip4s02qsrp8" path="res://Materials/grassss.jpg" id="1_7t5bf"]
+
+[sub_resource type="VisualShaderNodeTexture" id="VisualShaderNodeTexture_573s6"]
+expanded_output_ports = [0]
+texture = ExtResource("1_7t5bf")
+texture_type = 1
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_dgqhb"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeUVFunc" id="VisualShaderNodeUVFunc_767s6"]
+
+[sub_resource type="VisualShaderNodeFloatConstant" id="VisualShaderNodeFloatConstant_bfgdm"]
+constant = 5.0
+
+[resource]
+code = "shader_type spatial;
+render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_lambert, specular_schlick_ggx;
+
+uniform sampler2D tex_frg_2 : source_color;
+
+
+
+void fragment() {
+// Input:3
+	vec2 n_out3p0 = UV;
+
+
+// FloatConstant:6
+	float n_out6p0 = 5.000000;
+
+
+// UVFunc:4
+	vec2 n_in4p2 = vec2(0.00000, 0.00000);
+	vec2 n_out4p0 = n_in4p2 * vec2(n_out6p0) + n_out3p0;
+
+
+// Texture2D:2
+	vec4 n_out2p0 = texture(tex_frg_2, n_out4p0);
+	float n_out2p1 = n_out2p0.r;
+
+
+// Output:0
+	ALBEDO = vec3(n_out2p0.xyz);
+	SPECULAR = n_out2p1;
+
+
+}
+"
+nodes/fragment/0/position = Vector2(600, 160)
+nodes/fragment/2/node = SubResource("VisualShaderNodeTexture_573s6")
+nodes/fragment/2/position = Vector2(242.164, 280)
+nodes/fragment/3/node = SubResource("VisualShaderNodeInput_dgqhb")
+nodes/fragment/3/position = Vector2(-360, 320)
+nodes/fragment/4/node = SubResource("VisualShaderNodeUVFunc_767s6")
+nodes/fragment/4/position = Vector2(-20, 380)
+nodes/fragment/6/node = SubResource("VisualShaderNodeFloatConstant_bfgdm")
+nodes/fragment/6/position = Vector2(-220, 480)
+nodes/fragment/connections = PackedInt32Array(4, 0, 2, 0, 3, 0, 4, 0, 6, 0, 4, 1, 2, 0, 0, 0, 2, 1, 0, 4)

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cbyecd57m21jq"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0990372, -5.1769, 0.0907111)

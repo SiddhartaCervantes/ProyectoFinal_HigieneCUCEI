@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dd6wil3kneae2"]
+
+[ext_resource type="Script" path="res://Scenes/coin.gd" id="1_4vb2v"]
+[ext_resource type="ArrayMesh" uid="uid://fl1hlpgo7t8p" path="res://Materials/desodorante.obj" id="2_ojp3o"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_63ms4"]
+height = 0.15
+radius = 0.3
+
+[node name="Coin" type="Area3D"]
+script = ExtResource("1_4vb2v")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.42232e-09, 0.0786335, -0.000339979, 3.46149e-09, 0.000447415, 0.0597515, 0.0787428, -3.43724e-09, -2.61187e-09, 0, -0.205977, 0)
+mesh = ExtResource("2_ojp3o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_63ms4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

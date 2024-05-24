@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://h5as4qj317n"
+path="res://.godot/imported/Leaves_pile_3.obj-c5e00dd245cdce5bbd51bc486ff70ead.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Leaves_pile_3.obj-c5e00dd245cdce5bbd51bc486ff70ead.mesh"]
+
+source_file="res://Materials/ObjTree/Leaves_pile/Leaves_pile_3.obj"
+dest_files=["res://.godot/imported/Leaves_pile_3.obj-c5e00dd245cdce5bbd51bc486ff70ead.mesh", "res://.godot/imported/Leaves_pile_3.obj-c5e00dd245cdce5bbd51bc486ff70ead.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

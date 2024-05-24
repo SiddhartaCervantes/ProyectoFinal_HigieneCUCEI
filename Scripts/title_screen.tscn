@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=3 uid="uid://im6mwfubyni2"]
+
+[ext_resource type="Script" path="res://Scripts/TitleScreen.gd" id="1_jqj15"]
+[ext_resource type="Texture2D" uid="uid://ceo3a3vnfhp1n" path="res://BACKGROUND FRAMES/bg_animation/frame_0_delay-0.09s.png" id="2_b8ima"]
+[ext_resource type="Texture2D" uid="uid://ouyvjrxyh4b8" path="res://BACKGROUND FRAMES/bg_animation/frame_1_delay-0.09s.png" id="3_0blg7"]
+[ext_resource type="Texture2D" uid="uid://dg16wwwc3vkcv" path="res://Scenes/Start-Button-Vector-PNG.png" id="3_twwba"]
+[ext_resource type="Texture2D" uid="uid://cxn5ndp6rxfyq" path="res://Scenes/ProyectoFinal.png" id="4_0h7y6"]
+[ext_resource type="Texture2D" uid="uid://d26wi35n3mwmb" path="res://BACKGROUND FRAMES/bg_animation/frame_2_delay-0.09s.png" id="4_1cljf"]
+[ext_resource type="Texture2D" uid="uid://yvy787lxdfto" path="res://BACKGROUND FRAMES/bg_animation/frame_3_delay-0.09s.png" id="5_pjqo6"]
+[ext_resource type="Texture2D" uid="uid://bl7yx8nml83s6" path="res://BACKGROUND FRAMES/bg_animation/frame_4_delay-0.09s.png" id="6_bj58g"]
+[ext_resource type="Texture2D" uid="uid://vfw0da6gh2gb" path="res://BACKGROUND FRAMES/bg_animation/frame_5_delay-0.09s.png" id="7_ap78y"]
+[ext_resource type="Texture2D" uid="uid://d1n6b1p5q7fej" path="res://Scenes/exit.png" id="8_2hp6l"]
+[ext_resource type="Texture2D" uid="uid://5j1hht3khski" path="res://Scenes/andrea.png" id="9_17s2p"]
+[ext_resource type="Texture2D" uid="uid://jrj5g3411ep5" path="res://Scenes/joahan.png" id="10_d776x"]
+[ext_resource type="Texture2D" uid="uid://tpxebo588ihm" path="res://Scenes/dani.png" id="11_57e1j"]
+[ext_resource type="Texture2D" uid="uid://cke2lwrxpb0k" path="res://Scenes/HIGIENE.png" id="12_ipcnt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxksd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_b8ima")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_0blg7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1cljf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pjqo6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_bj58g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ap78y")
+}],
+"loop": true,
+"name": &"help",
+"speed": 5.0
+}]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 7.0
+offset_right = -6.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jqj15")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(970, 537)
+scale = Vector2(3.36964, 3.00658)
+sprite_frames = SubResource("SpriteFrames_xxksd")
+animation = &"help"
+frame_progress = 0.697246
+
+[node name="QuitButton" type="Button" parent="."]
+visibility_layer = 269
+layout_mode = 0
+offset_left = 1557.0
+offset_top = 885.0
+offset_right = 2912.0
+offset_bottom = 1792.99
+scale = Vector2(0.253034, 0.22074)
+theme_override_font_sizes/font_size = 1
+action_mode = 0
+text = "
+"
+icon = ExtResource("8_2hp6l")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="StartButton" type="Button" parent="."]
+visibility_layer = 269
+layout_mode = 0
+offset_left = 811.0
+offset_top = 466.0
+offset_right = 2166.0
+offset_bottom = 1374.0
+scale = Vector2(0.253034, 0.22074)
+theme_override_font_sizes/font_size = 1
+action_mode = 0
+text = "
+"
+icon = ExtResource("3_twwba")
+flat = true
+icon_alignment = 1
+expand_icon = true
+
+[node name="ProyectoFinal4" type="Sprite2D" parent="."]
+position = Vector2(570, 869)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("9_17s2p")
+
+[node name="ProyectoFinal3" type="Sprite2D" parent="."]
+position = Vector2(644, 758)
+scale = Vector2(0.31, 0.31)
+texture = ExtResource("10_d776x")
+
+[node name="ProyectoFinal2" type="Sprite2D" parent="."]
+position = Vector2(595, 995)
+scale = Vector2(0.310169, 0.310169)
+texture = ExtResource("11_57e1j")
+
+[node name="ProyectoFinal5" type="Sprite2D" parent="."]
+position = Vector2(1013, 356)
+scale = Vector2(0.641793, 0.806011)
+texture = ExtResource("12_ipcnt")
+
+[node name="ProyectoFinal" type="Sprite2D" parent="."]
+position = Vector2(1020, 162)
+scale = Vector2(0.556928, 0.556928)
+texture = ExtResource("4_0h7y6")
+
+[connection signal="pressed" from="QuitButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
